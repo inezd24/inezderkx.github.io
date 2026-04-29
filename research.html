@@ -1,28 +1,106 @@
-# Academic Personal Website
-
-Static HTML site, ready to drop into your `inezderkx.github.io` repo.
-
-## Files
-- `index.html` — Landing page (hero + recent activity)
-- `about.html` — Bio, education, appointments, link to CV
-- `research.html` — Publications list
-- `projects.html` — Active and past projects
-- `tools.html` — GitHub packages and Docker images
-- `contact.html` — Email, office, social links
-- `assets/styles.css` — All styling
-- `assets/main.js` — Mobile nav + active link
-
-## Setup
-1. Replace `Dr. Your Name` and `[your...]` placeholders throughout the HTML.
-2. Replace the two hero/about images (currently `picsum.photos`).
-3. Drop your CV at the site root as `cv.pdf` (the About + hero links to it).
-4. Update GitHub / Scholar / ORCID / Mastodon URLs in the footer and Contact page.
-5. Push to `username.github.io` repo and GitHub Pages serves it automatically.
-
-## Customizing colors
-Edit the CSS variables at the top of `assets/styles.css`:
-- `--brand` — primary accent (blue by default)
-- `--accent` — secondary accent (warm orange)
-- `--text`, `--text-muted`, `--surface`, `--border` — neutral palette
-
-Colors use `oklch()` for perceptual uniformity.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — Dr. Your Name</title>
+  <meta name="description" content="Peer-reviewed publications, preprints, and talks by Dr. Your Name." />
+  <meta property="og:title" content="Research — Dr. Your Name" />
+  <meta property="og:description" content="Peer-reviewed publications, preprints, and talks by Dr. Your Name." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">Dr. Your Name</a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="contact.html" class="btn-contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="page-header">
+  <div class="container">
+    <div class="eyebrow">Research</div>
+    <h1>Publications</h1>
+    <p>A complete list of peer-reviewed publications, preprints, and book chapters. Also available on <a href="https://scholar.google.com" style="color:var(--brand)">Google Scholar</a>.</p>
+  </div>
+</header>
+<main>
+  <section>
+    <div class="container">
+      <ul class="pub-list">
+        <li class="pub-item">
+          <div class="pub-year">2025</div>
+          <div>
+            <h3 class="pub-title">Title of recent paper goes here</h3>
+            <p class="pub-authors">Your Name, Co-author A, Co-author B</p>
+            <p class="pub-venue">Journal of Important Research, 42(3), 100&ndash;120.</p>
+            <div class="pub-links">
+              <a href="#">PDF</a>
+              <a href="#">DOI</a>
+              <a href="#">Code</a>
+              <a href="#">BibTeX</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub-item">
+          <div class="pub-year">2024</div>
+          <div>
+            <h3 class="pub-title">Another publication title</h3>
+            <p class="pub-authors">Your Name, Co-author C</p>
+            <p class="pub-venue">Proceedings of [Conference], pp. 50&ndash;65.</p>
+            <div class="pub-links">
+              <a href="#">PDF</a>
+              <a href="#">DOI</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub-item">
+          <div class="pub-year">2023</div>
+          <div>
+            <h3 class="pub-title">An earlier influential paper</h3>
+            <p class="pub-authors">Co-author D, Your Name, Co-author E</p>
+            <p class="pub-venue">Nature Something, 615, 200&ndash;215.</p>
+            <div class="pub-links">
+              <a href="#">PDF</a>
+              <a href="#">DOI</a>
+              <a href="#">Data</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub-item">
+          <div class="pub-year">2022</div>
+          <div>
+            <h3 class="pub-title">Foundational work in the field</h3>
+            <p class="pub-authors">Your Name</p>
+            <p class="pub-venue">PhD Thesis, University Name.</p>
+            <div class="pub-links">
+              <a href="#">PDF</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 Your Name &middot;
+      <a href="https://github.com/yourusername">GitHub</a> &middot;
+      <a href="https://scholar.google.com">Google Scholar</a> &middot;
+      <a href="https://orcid.org">ORCID</a>
+    </p>
+  </div>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>
